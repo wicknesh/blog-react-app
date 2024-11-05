@@ -9,9 +9,9 @@ const Blogs = () => {
   return (
     <div>
       <Grid container spacing={2} style={{marginTop: "3%"}}>
-        {data.map((row)=>(
-          <Grid size={4}>
-            <Card fullWidth>
+        {data.map((row, index)=>(
+          <Grid item key={row.id || index} size={4}>
+            <Card sx={{ maxWidth: 345 }}>
               <CardMedia
               sx={{ height: 140 }}
               image={row.blogimg}/>
