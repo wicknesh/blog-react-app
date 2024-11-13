@@ -10,7 +10,9 @@ const NavBar = () => {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>Blog App</Typography>
           <Button color="inherit"><Link to={'/blogs'} style={{color: 'white'}}>Home</Link></Button>
           <Button color="inherit"><Link to={'/addblog'} style={{color: 'white'}}>Add Blog</Link></Button>
-          <Button color="inherit"><Link to={'/'} style={{color: 'white'}}>Logout</Link></Button>
+          <Button color="inherit"><Link to={'/login'} style={{color: 'white'}} onClick={() => {
+            sessionStorage.removeItem('token');
+          }}>Logout</Link></Button>
       </Toolbar>
       </AppBar>
     </Box>
